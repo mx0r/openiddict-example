@@ -1,0 +1,31 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.Extensions.Primitives
+@model Example.AuthServer.ViewModels.AuthorizeViewModel
+<form autocomplete="off" asp-controller="Authorization" asp-action="Authorize" method="post">
+    <input type="hidden" asp-for="ClientId"/>
+    <input type="hidden" asp-for="ReturnUrl"/>
+    @foreach (var parameter in Context.Request.HasFormContentType ?
+        (IEnumerable<KeyValuePair<string, StringValues>>) Context.Request.Form : Context.Request.Query)
+    {
+        <input type="hidden" name="@parameter.Key" value="@parameter.Value" />
+    }
+    <div class="card">
+        <div class="card-header">
+            Authorization Request
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">@Model.ApplicationName</h4>
+            <p>would like to access following resources on behalf of <b>@Model.UserName</b>:</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            @foreach (var scope in Model.Scopes)
+            {
+                <li class="list-group-item">@scope.Description</li>
+            }
+        </ul>
+        <div class="card-body">
+            <input class="btn btn-success" name="submit.Allow" type="submit" value="Authorize"/>
+            <input class="btn btn-danger" name="submit.Deny" type="submit" value="Deny"/>
+        </div>
+    </div>
+</form>

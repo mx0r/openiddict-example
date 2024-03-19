@@ -1,0 +1,22 @@
+@model Example.AuthServer.ViewModels.LoginViewModel
+<form autocomplete="off" asp-route="Login">
+    <input type="hidden" asp-for="ClientId"/>
+    <input type="hidden" asp-for="ReturnUrl"/>
+    <div class="card">
+        <div class="card-header">
+            Log in
+        </div>
+        <div class="card-body">
+            @if (Model.ErrorMessage is not null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @Model.ErrorMessage
+                </div>
+            }
+
+            <input type="text" class="form-control form-control-lg" placeholder="Username" asp-for="Username" autofocus="autofocus"/>
+            <input type="password" class="form-control form-control-lg form-control-last" placeholder="Password" asp-for="Password"/>
+            <button type="submit" class="btn btn-dark btn-block mt-3">Login</button>
+        </div>
+    </div>
+</form>

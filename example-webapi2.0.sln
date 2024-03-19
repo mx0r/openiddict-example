@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.WebApi", "Example.WebApi\Example.WebApi.csproj", "{346C7D62-2A52-46BC-BC3A-49953DFAF11F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.AuthServer", "Example.AuthServer\Example.AuthServer.csproj", "{430139F0-8946-4985-BD9B-2203527E2DCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{346C7D62-2A52-46BC-BC3A-49953DFAF11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346C7D62-2A52-46BC-BC3A-49953DFAF11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346C7D62-2A52-46BC-BC3A-49953DFAF11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346C7D62-2A52-46BC-BC3A-49953DFAF11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430139F0-8946-4985-BD9B-2203527E2DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430139F0-8946-4985-BD9B-2203527E2DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430139F0-8946-4985-BD9B-2203527E2DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430139F0-8946-4985-BD9B-2203527E2DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
