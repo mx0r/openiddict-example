@@ -1,0 +1,518 @@
+{
+  "info": {
+    "name": "Modern API Security",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Client Credentials (AUTH ADMIN)",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "auth-admin",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "auth-password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access admin:auth",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Client Credentials (API)",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "machines-api-client",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access read:weather write:weather",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Client Credentials (API) SCOPE DENIED",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "machines-api-client",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access admin:auth",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Client Credentials (APP) GRANT DENIED",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "machines-application-client",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access read:weather",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "ROPC (APP, BELLA)",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "machines-application-client",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access read:weather",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "username",
+              "value": "bella.baxter@name.info",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "password",
+              "value": "password-baxter",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "ROPC (APP, APPLE BEE) CLIENT DENIED",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "machines-application-client",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access read:weather",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "username",
+              "value": "applebee@examplecorp.com",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "password",
+              "value": "password-bee",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "ROPC (API) GRANT DENIED",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{AUTH_SERVER_TOKEN_ENDPOINT}}",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{AUTH_SERVER_TOKEN_ENDPOINT}}"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "description": null
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "disabled": false,
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "machines-api-client",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "client_secret",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "scope",
+              "value": "offline_access read:weather",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "username",
+              "value": "applebee@examplecorp.com",
+              "disabled": false,
+              "description": null
+            },
+            {
+              "key": "password",
+              "value": "password-bee",
+              "disabled": false,
+              "description": null
+            }
+          ]
+        },
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Get Weather Forecast",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{EXAMPLE_API_ENDPOINT}}/api/v1/weather-forecast",
+          "query": null,
+          "protocol": null,
+          "host": [
+            "{{EXAMPLE_API_ENDPOINT}}/api/v1/weather-forecast"
+          ],
+          "port": null,
+          "path": null
+        },
+        "description": "",
+        "header": [],
+        "body": null,
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "accessToken",
+              "value": "***** Hidden credentials *****",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    }
+  ]
+}
